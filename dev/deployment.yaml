@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deployment
-  namespace: myappns
 spec:
   replicas: 2
   selector:
@@ -12,12 +11,11 @@ spec:
     metadata:
       labels:
         app: nginx
-  spec:
-    containers:
+    spec:
+      containers:
       - name: nginx
         image: akreng/devopsrepo:latest
-        imagePullPolicy: Always  # Ensure the image is always pulled
         ports:
         - containerPort: 80
-    imagePullSecrets:
-    - name: docker-secret
+      imagePullSecrets:
+      - name: docker-secret
