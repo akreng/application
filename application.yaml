@@ -8,9 +8,8 @@ spec:
   project: default 
   source:
     repoURL: https://github.com/akreng/application.git
-    targetRevision: HEAD
+    targetRevision: main
     path: dev
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: myappns
-    
