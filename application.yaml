@@ -9,9 +9,16 @@ spec:
   project: default 
   source:
     repoURL: https://github.com/akreng/application.git
-    targetRevision: main
+    targetRevision: HEAD
     path: dev
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: myappns
   
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+
+    automated:
+      selfHeal: true
+      prune: true
