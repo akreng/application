@@ -1,0 +1,21 @@
+# argocd-application.yaml
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx-application
+spec:
+  source:
+    repoURL: https://github.com/akreng/application.git
+    targetRevision: main
+    path: dev
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: myappns
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+  sourceSecret:
+    name: argocd-github-secret  # Reference to the GitHub secret you created
