@@ -14,9 +14,4 @@ spec:
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: myappns
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-  credentials:
-    - name: github-repo-credentials
+  
