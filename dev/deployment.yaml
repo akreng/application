@@ -11,11 +11,10 @@ spec:
     metadata:
       labels:
         app: nginx
-    spec:
+  spec:
       containers:
       - name: nginx
-        image: akreng/devopsrepo:latest
+        image: nginx:latest
         ports:
         - containerPort: 80
-      imagePullSecrets:
-      - name: docker-secret
+    
