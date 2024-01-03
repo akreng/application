@@ -19,5 +19,5 @@ spec:
         imagePullPolicy: Always  # Ensure the image is always pulled
         ports:
         - containerPort: 80
-        imagePullSecrets:
-      - name: docker-secret
+    imagePullSecrets:
+    - name: docker-secret
