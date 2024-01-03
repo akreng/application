@@ -5,18 +5,12 @@ kind: Application
 metadata:
   name: nginx-application
 spec:
+  project: default 
   source:
     repoURL: https://github.com/akreng/application.git
-    targetRevision: main
+    targetRevision: HEAD
     path: dev
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: myappns
-  project: default
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-  sourceSecret:
-    name: argocd-github-secret
-    namespace: argocd
+    
