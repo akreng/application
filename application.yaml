@@ -18,4 +18,5 @@ spec:
       prune: true
       selfHeal: true
   sourceSecret:
-    name: argocd-github-secret  # Reference to the GitHub secret you created
+    name: argocd-github-secret
+    namespace: argocd
