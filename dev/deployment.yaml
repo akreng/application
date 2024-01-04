@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: akreng/devopsrepo:62aafd0
+        image: akreng/devopsrepo:bc1d8eb
         ports:
         - containerPort: 80
